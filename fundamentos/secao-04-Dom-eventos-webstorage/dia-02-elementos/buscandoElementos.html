@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscando Elementos</title>
+</head>
+<body>
+    <main id="parent-of-parent">
+        <section id="parent">
+          <section id="first-child"></section>
+          <section id="where-are-you">
+            <section id="first-child-of-child"></section>
+          </section>
+          Attention!
+          <section id="third-child"></section>
+          <section id="fourth-and-last-child"></section>
+        </section>
+      </main>
+
+      <script>
+        /*
+            Acesse o elemento where-are-you.
+            Acesse parent a partir de where-are-you e adicione uma color a ele.
+            Acesse o first-child-of-child e adicione um texto a ele. Você se lembra dos vídeos da aula anterior? Eles ensinam como fazer isso.
+            Acesse o first-child a partir de parent.
+            Acesse o first-child a partir de where-are-you.
+            Acesse o texto Attention! a partir de where-are-you.
+            Acesse o third-child a partir de where-are-you.
+            Acesse o third-child a partir de parent.
+            */
+
+        let whereareyou = document.querySelector('#where-are-you');
+        let parent = whereareyou.parentNode;
+        parent.style.backgroundColor = 'gray';
+        
+        let firstChildOfChild = document.querySelector('#first-child-of-child');
+        firstChildOfChild.innerText = 'TEXTO';
+
+        let firstChild = parent.firstElementChild;
+        firstChild.innerText = 'filho'
+
+        let firstChildWhere = whereareyou.previousElementSibling;
+
+        let attention = whereareyou.nextSibling;
+        
+        let thirdChild = whereareyou.nextElementSibling;
+       
+        let thirdParent = parent.lastElementChild.previousElementSibling;
+       
+    
+      
+        
+      </script>
+</body>
+</html>

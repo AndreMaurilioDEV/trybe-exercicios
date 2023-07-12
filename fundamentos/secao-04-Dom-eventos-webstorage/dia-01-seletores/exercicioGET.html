@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador do Tempo</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    header {
+        background-color: green;
+        text-align: center;
+        color: white;
+    }
+
+    .urgente-importante,
+    .urgente-N-importante {
+        background-color: salmon;
+        width: 450px;
+        height: 200px;
+        text-align: center;
+    }
+
+    .urgente-importante p,
+    .urgente-N-importante p {
+        background-color: pink;
+        font-size: 20px;
+    }
+
+    .N-urgente-importante,
+    .N-urgente-N-importante {
+        background-color: yellow;
+        width: 450px;
+        height: 200px;
+        text-align: center;
+    }
+
+    .N-urgente-importante p,
+    .N-urgente-N-importante p {
+        background-color: black;
+        font-size: 20px;
+        color: white;
+    }
+
+    main {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        text-align: center;
+        background-color: grey;
+        color: white;
+        height: 20px;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Administrador do Tempo da Trybe</h1>
+    </header>
+    <main>
+        <div class="container-1">
+            <div class="urgente-importante">
+                <p>Urgente e importante</p>
+            </div>
+
+            <div class="urgente-N-importante">
+                <p>Urgente e Não importante</p>
+            </div>
+        </div>
+
+        <div class="container-2">
+            <div class="N-urgente-importante">
+                <p>Não urgente e importante</p>
+            </div>
+
+            <div class="N-urgente-N-importante">
+                <p>Não urgente e Não importante</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Trybe</p>
+    </footer>
+
+    <script>
+        let header = document.querySelector('header');
+        header.style.backgroundColor = 'rgb(0, 176, 105)';
+
+        let divUrgenteImportante = document.querySelector('.urgente-importante');
+        divUrgenteImportante.style.backgroundColor = 'rgb(255, 159, 132)';
+        let backTitle = document.querySelector('.urgente-importante p');
+        backTitle.style.backgroundColor = 'rgb(165, 0, 243)';
+
+        let divImportante = document.querySelector('.N-urgente-importante');
+        divImportante.style.backgroundColor = 'rgb(249, 219, 94)';
+        let backTitleImportante = document.querySelector('.N-urgente-importante p');
+        backTitleImportante.style.backgroundColor = 'rgb(35, 37, 37)';
+
+        let footer = document.querySelector('footer');
+        footer.style.backgroundColor = 'rgb(0, 53, 51)';
+    </script>
+</body>
+</html>

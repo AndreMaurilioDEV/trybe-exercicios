@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcões GET</title>
+</head>
+<body>
+    <main>
+        <h1>Título</h1>
+        <p class="tag-p">resumo do filme</p>
+        <h2>Subtítulo</h2>
+        <p class="tag-p"></p>
+      
+    </main>
+    
+    <script>
+        let title = document.querySelector('h1');
+        title.innerText = 'Todo mundo em pânico';
+
+        let firstP = document.querySelector('.tag-p');
+        firstP.innerText = 'Muito louco';
+
+        let subtitle = document.querySelector("h2");
+        subtitle.innerText = 'Principais informações';
+
+        let paragrafos = document.getElementsByClassName('tag-p');
+        paragrafos[0].style.fontSize = '35px';
+        paragrafos[1].innerHTML = 'Direção: Keenen Ivory Wayans, <br> Roteiristas: Shawn Wayans';
+        subtitle.style.color = 'red';
+    </script>
+</body>
+</html>
