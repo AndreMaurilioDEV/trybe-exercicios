@@ -135,12 +135,35 @@ const findPersonByPosition = (position) => {
 //console.log(findPersonByPosition(15));
 
 
-const findPeopleByState = (state) => {
-  // seu código aqui
+const verifyArray = (array) => {
 
+  if (array.length === 0) {
+      throw new Error('Ops, nenhuma pessoa mora nesse estado, tente outro');
+  }
 };
 
-//findPeopleByState();
+const findPeopleByState = (state) => {
+  // seu código aqui
+ 
+  try {
+      let person = [];
+      for (let index = 0; index < clients.length; index++) {
+          if (clients[index].address.state === state) {
+              person.push(clients[index].name);
+          }
+      }
+      verifyArray(person);
+      return person;
+  } 
+  catch (error) {
+      return error.message;
+  }
+};
+console.log(findPeopleByState('PE'));
+console.log(findPeopleByState('PB'));
+console.log(findPeopleByState('RJ'));
+console.log(findPeopleByState('AM'));
+console.log(findPeopleByState('SP'));
 
 
 const studentRegister = (name, age) => {
